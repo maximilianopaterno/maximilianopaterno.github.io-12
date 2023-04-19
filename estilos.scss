@@ -1,0 +1,202 @@
+//fondo primario
+$fondo:  url(https://img.freepik.com/vector-gratis/fondo-hexagonal-estilo-degradado_52683-61751.jpg?w=740&t=st=1681572191~exp=1681572791~hmac=69ac18cd1e904461af2f7d632c454694ec238051c3b1cc488d55534f7bdfadf4);
+
+
+//Variables para enlace de redes sociales
+$display_icon: block;
+$animacion: backInRight;
+
+body
+{
+    height: 100%;
+}
+
+//Inicio propiedades y MediaQuery clases .arriba y .abajo
+.arriba
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+    background-image:  $fondo;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img
+    {
+        width: 360px;
+        height: 360px;
+    }
+    h1
+    {
+        width: 300px;
+        color: white;
+        animation-duration: 2s;
+    }
+}
+@media (min-width:110px) and (max-width: 600px) 
+{
+    .arriba, .abajo
+    {
+        zoom: 80%;
+    }
+}
+.abajo
+{
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-color:#bcbabb;
+    z-index: 1;
+
+    .inicio
+    {
+        display: flex;
+        text-align: center;
+        padding-left: 45%;
+        padding-top: 10%;
+        animation-duration: 5s;
+            :hover
+                 {
+                   color: yellow ;  
+                   animation:scale-up-top 0.8s; 
+                 }    
+                @keyframes scale-up-top
+                {
+                0%{transform:scale(.5);
+                transform-origin:center top}
+                100%{transform:scale(1);
+                transform-origin:center top}
+                }
+        a
+        {
+            background-image: $fondo;
+            padding: 5px 10px;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }  
+    }
+}    
+.redes_landing
+{
+    margin-right: 150px;
+    position: relative;
+    float: right; 
+    a
+    {
+        color: black;
+        text-decoration: none;
+        padding: 2px;
+        font-size: 20px;
+        font-weight: bold;
+    } 
+    .redes-icon0
+    {
+        display: $display_icon;
+        animation: $animacion;
+        animation-duration: 3s;
+        :hover
+         {
+           color: yellow ;
+           font-size: 21px;
+        }
+    }
+
+    .redes-icon1
+    {
+        display: $display_icon;
+        animation: $animacion;
+        animation-duration: 4s;
+        :hover
+         {
+           color: yellow ;
+           font-size: 25px;
+        }
+    }
+    .redes-icon2
+    {
+        display: $display_icon;
+        animation: $animacion;
+        animation-duration: 5s;
+        :hover
+         {
+           color: yellow ;
+           font-size: 25px;
+        }
+    }
+}
+//Fin propiedades y MediaQuery clases .arriba y .abajo
+//Inicio propiedades y MediaQuery clase .waves
+.waves
+{
+    position: relative;
+    top: -78%;
+    z-index: 0;
+}
+
+@media (min-width:50px) and (max-width:600px)
+{
+  .waves{
+            position: relative;
+            top: -348px;
+        } 
+   .inicio
+        {
+            position: relative;
+            left: -40px
+        }   
+    .abajo
+        {
+            position: flex;
+            justify-content: space-evenly
+        }
+}
+
+//Fin propiedades y MediaQuery clase .waves
+
+
+//Inicio propiedad y MediaQuery clase header
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+.menu
+{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-image: $fondo;
+    :hover
+        {
+            animation: animate__fadeInDown;
+        }
+    .logo
+        {
+            display: inline-flex;
+        }
+             h2
+                {
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+                width: 100px;
+                padding-top: 40px;
+                }  
+}
+
+@media (min-width: 110px) and (max-width: 992px)
+{
+    .menu
+        {
+            height: 100px;
+            width: 100px;
+            .logo
+            {
+               zoom: 80%;
+            }   
+        }
+}
+//Fin propiedad y MediaQuery clase header
